@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 beautifulsoup4 = "*"
-discord-py = "*"
+discord-py = {extras = ["voice"],version = "*"}
 python-dotenv = "*"
 pafy = "*"
 requests = "*"
