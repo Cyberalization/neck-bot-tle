@@ -12,6 +12,8 @@ python-dotenv = "*"
 pafy = "*"
 requests = "*"
 youtube-dl = "*"
+ffmpeg = "*"
+asyncio = "*"
 
 [requires]
 python_version = "3.8"
