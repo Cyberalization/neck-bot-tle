@@ -198,7 +198,7 @@ async def on_message(message):
         \'/search\' + apa yg mau dicari (via youtube), buat dapet judul + 11 digit kode youtube
         sekian, mungkin baru ini :\)```'''
 
-        await message.content.send(gogogo)
+        await message.channel.send(gogogo)
 
 
 
