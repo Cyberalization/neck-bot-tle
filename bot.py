@@ -200,67 +200,7 @@ sekian, mungkin baru ini :)```'''
 
         await message.channel.send(gogogo)
 
-    if "//play" == message.content.lower()[:6]:
-        if tmp:
-            tmp = []
-        x = message.content[7:]
-        user = message.author
-        print(str(user) +" "+ x)
-        #####
-        title=[]
-        link=[]
-        tmp = search(x)
-        i = 1
-        res = ''
-        for z in tmp:
-            title,link = z.split(';')
-
-            res+='\n'+str(i)+". "+title+" ; "+link[-11:]
-            i+=1
-        msg="here is what i\'ve found:"+res
-        ###
-        await message.channel.send(msg+"\nwhich number do you want to play?")
-        flag = 0 
-    if message.author == user and flag == 0 and message.content.isdigit():
-        
-        discord.opus.load_opus()
-        if not discord.opus.is_loaded():
-            raise RunTimeError('Opus failed to load')
-        voice_channel = message.author.voice.channel
-        # voice_channel = 
-        channel=None
-        # only play music if user is in a voice channel
-        flag = 1
-        if voice_channel!= None:
-            zzz,x = tmp[int(message.content)-1].split(';')
-            x = x[-11:]
-            # await message.channel.send('your command is being proceed\nplease don\'t send anything...')
-            video = pafy.new(x) 
-            bestaudio = video.getbestaudio() 
-            title = video.title
-            title = ''.join(e for e in title if e.isalnum() or e == ' ' or e == '-'or e == '_')
-            title = title +".mp3"
-            bestaudio.download(filepath=title)
-            # grab user's voice channel
-            channel=voice_channel.name
-            # await message.channel.send('User is in channel: '+ channel)
-            # create StreamPlayer
-            vc = await message.author.voice.channel.connect()
-            # vc.play(discord.FFmpegPCMAudio(title))
-            print(vc.play(discord.FFmpegPCMAudio(title)))
-            # vc.is_playing()
-            # vc.pause()
-            # vc.resume()
-            # vc.stop()
-            while vc.is_playing():
-                asyncio.sleep(2)
-            # disconnect after the player has finished
-            
-            vc.stop()
-            await vc.disconnect()
-        else:
-            await message.channel.send('User is not in a channel.')
-
+    
     # if "//play" == message.content.lower()[:6]:
     #     if tmp:
     #         tmp = []
