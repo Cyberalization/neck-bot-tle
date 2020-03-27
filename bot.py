@@ -182,7 +182,20 @@ async def on_message(message):
             title,link = z.split(';')
             res+='\n'+str(i)+". "+title+" ; "+link[-11:]
             i+=1
-        await message.channel.send("here is what i\'ve found:"+res)
+        await message.channel.send("here is what i\'ve found:"+res) 
+   
+    if '/help' == mesage.content.lower():
+        gogogo='''```bot feature:
+        \'apakah\'
+        \'throw a dice\'
+        \'what is love?\'
+        \'nanti\'
+        teguran buat kata kata kasar
+        \'galau\'
+        \'random fact/'
+        \'/download\'+ 11 digit kode youtube / link youtube langsung juga bisa
+        \'/search\' + apa yg mau dicari (via youtube), buat dapet judul + 11 digit kode youtube
+        sekian, mungkin baru ini :\)```'''
 
 
 
