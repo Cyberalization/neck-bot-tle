@@ -88,7 +88,8 @@ cursed = [
 "anal",
 "pepek",
 "cipet",
-"asshole"
+"asshole",
+"kntl"
 ]
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -184,7 +185,7 @@ async def on_message(message):
             i+=1
         await message.channel.send("here is what i\'ve found:"+res) 
    
-    if '/help' == mesage.content.lower():
+    if '/help' == message.content.lower():
         gogogo='''```bot feature:
         \'apakah\'
         \'throw a dice\'
@@ -197,7 +198,7 @@ async def on_message(message):
         \'/search\' + apa yg mau dicari (via youtube), buat dapet judul + 11 digit kode youtube
         sekian, mungkin baru ini :\)```'''
 
-
+        await message.content.send(gogogo)
 
 
 
