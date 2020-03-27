@@ -187,16 +187,16 @@ async def on_message(message):
    
     if '/help' == message.content.lower():
         gogogo='''```bot feature:
-        \'apakah\'
-        \'throw a dice\'
-        \'what is love?\'
-        \'nanti\'
-        teguran buat kata kata kasar
-        \'galau\'
-        \'random fact/'
-        \'/download\'+ 11 digit kode youtube / link youtube langsung juga bisa
-        \'/search\' + apa yg mau dicari (via youtube), buat dapet judul + 11 digit kode youtube
-        sekian, mungkin baru ini :\)```'''
+\'apakah\'
+\'throw a dice\'
+\'what is love?\'
+\'nanti\'
+teguran buat kata kata kasar
+\'galau\'
+\'random fact/'
+\'/download\'+ 11 digit kode youtube / link youtube langsung juga bisa
+\'/search\' + apa yg mau dicari (via youtube), buat dapet judul + 11 digit kode youtube
+sekian, mungkin baru ini :)```'''
 
         await message.channel.send(gogogo)
 
