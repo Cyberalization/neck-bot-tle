@@ -221,10 +221,11 @@ sekian, mungkin baru ini :)```'''
         ###
         await message.channel.send(msg+"\nwhich number do you want to play?")
         flag = 0 
-    print(user)
     if message.author == user and flag == 0 and message.content.isdigit():
         
-        print (tmp)
+        discord.opus.load_opus()
+        if not discord.opus.is_loaded():
+            raise RunTimeError('Opus failed to load')
         voice_channel = message.author.voice.channel
         # voice_channel = 
         channel=None
