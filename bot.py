@@ -135,15 +135,15 @@ async def on_message(message):
         await message.channel.send(response)
     if message.content == 'halo neckbottle':
         await message.channel.send("halo juga :3")
-    if 'nanti' in message.content:
-        await message.channel.send("nanti mulu terus kapan pler?")
+#    if 'nanti' in message.content:
+#        await message.channel.send("nanti mulu terus kapan pler?")
     if message.content.lower() == 'throw a dice':
         rand = randint(1,6)
         hasil = 'Nilai dadu yang dilempar : '+str(rand)
         await message.channel.send(hasil)
-    for curse in cursed:
-        if curse in message.content.lower():
-            await message.channel.send(message.author.mention+" tolong dong omongan dijaga -.-\"")
+ #   for curse in cursed:
+ #       if curse in message.content.lower():
+ #           await message.channel.send(message.author.mention+" tolong dong omongan dijaga -.-\"")
     if message.content.lower()=='what is love?':
         await message.channel.send('baby don\'t hurt me')
         sleep(1)
@@ -190,8 +190,6 @@ async def on_message(message):
 \'apakah\'
 \'throw a dice\'
 \'what is love?\'
-\'nanti\'
-teguran buat kata kata kasar
 \'galau\'
 \'random fact\'
 \'/download\'+ 11 digit kode youtube / link youtube langsung juga bisa
