@@ -138,7 +138,7 @@ async def on_message(message):
             'no doubt no doubt no doubt no doubt.'
         ),
     ]
-    if message.content.lower().startswith("is") or message.content.lower().startswith("will") and message.content.lower().endswith("???"):
+    if message.content.lower().startswith("is") or message.content.lower().startswith("will") and message.content.lower().endswith("??"):
         rand = randint(1,2)
         if(rand==1):
             await message.channel.send("yep")
