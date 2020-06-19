@@ -47,6 +47,20 @@ def search(x):
         i+=1
     return find
 # search("hanezeve caradhina")
+urlx = "https://everydaypower.com/sad-love-quotes/"
+quotesx = []
+px = requests.get(urlx)
+soupx = BeautifulSoup(px.content,'html.parser')
+xx = soupx.findAll('p')
+def love():
+    global xx
+    i = randint(12,159)
+    if '. ' in xx[i].get_text():
+        return(xx[i].get_text().split('. ',1)[1])
+    else:
+        return(xx[i].get_text())
+
+
 
 cursed = [
 "kontol",
@@ -124,22 +138,22 @@ async def on_message(message):
             'no doubt no doubt no doubt no doubt.'
         ),
     ]
-    if "apakah" in message.content[:6].lower():
+    if "is" in message.content[:2].lower() and message.content.lower.endwith("???"):
         rand = randint(1,2)
         if(rand==1):
-            await message.channel.send("iya")
+            await message.channel.send("yep")
         else:
-            await message.channel.send("engga")
+            await message.channel.send("nope")
     if message.content == '99!':
         response = random.choice(brooklyn_99_quotes)
         await message.channel.send(response)
-    if message.content == 'halo neckbottle':
-        await message.channel.send("halo juga :3")
+    if message.content == 'hello neckbottle':
+        await message.channel.send("hello :3")
 #    if 'nanti' in message.content:
 #        await message.channel.send("nanti mulu terus kapan pler?")
     if message.content.lower() == 'throw a dice':
         rand = randint(1,6)
-        hasil = 'Nilai dadu yang dilempar : '+str(rand)
+        hasil = '>> '+str(rand)
         await message.channel.send(hasil)
  #   for curse in cursed:
  #       if curse in message.content.lower():
@@ -159,6 +173,8 @@ async def on_message(message):
         await message.channel.send(quotes())
     if "wow" in message.content.lower():
         await message.channel.send(file=discord.File('Harris,lick.gif'))
+    if "gimme love quotes" == message.content.lower():
+        await message.channel.send(love())
     if "/download" == message.content.lower()[:9]:
         x =message.content.split(' ')
         x = x[1]
