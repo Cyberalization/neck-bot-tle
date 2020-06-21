@@ -173,8 +173,8 @@ async def on_message(message):
         await message.channel.send(scrap())
     if"galau" in message.content.lower():
         await message.channel.send(quotes())
-    if "wow" in message.content.lower():
-        await message.channel.send(file=discord.File('Harris,lick.gif'))
+  #  if "wow" in message.content.lower():
+   #     await message.channel.send(file=discord.File('Harris,lick.gif'))
     if "gimme love quotes" == message.content.lower():
         await message.channel.send(love())
     if "/download" == message.content.lower()[:9]:
