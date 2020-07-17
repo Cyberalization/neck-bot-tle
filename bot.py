@@ -140,7 +140,7 @@ async def on_message(message):
     ]
     if "papa bless" in message.content.lower():
            await message.channel.send('PAPA BLESS')
-    if message.content.lower().startswith("am") or message.content.lower().startswith("is") or message.content.lower().startswith("are") or message.content.lower().startswith("do") or message.content.lower().startswith("did"):
+    if message.content.lower().startswith("am") or message.content.lower().startswith("is") or message.content.lower().startswith("are") or message.content.lower().startswith("do") or message.content.lower().startswith("did") or message.content.lower().endswith("?"):
         rand = randint(1,2)
         if(rand==1):
             await message.channel.send("yep")
