@@ -212,7 +212,6 @@ async def on_message(message):
             i+=1
         await message.channel.send("here is what i\'ve found:"+res) 
         return
-    if "galau" in 
     if '/help' == message.content.lower():
         gogogo='''```bot feature:
         
