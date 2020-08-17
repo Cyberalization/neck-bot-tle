@@ -140,23 +140,28 @@ async def on_message(message):
     ]
     if "papa bless" in message.content.lower():
            await message.channel.send('PAPA BLESS')
+           return
     if (message.content.lower().startswith("am") or message.content.lower().startswith("is") or message.content.lower().startswith("are") or message.content.lower().startswith("do") or message.content.lower().startswith("did") or message.content.lower().endswith("?")) and "@NeckBotTle" in message.content:
         rand = randint(1,2)
         if(rand==1):
             await message.channel.send("yep")
         else:
             await message.channel.send("nope")
+        return
     if message.content == '99!':
         response = random.choice(brooklyn_99_quotes)
         await message.channel.send(response)
+        return
     if message.content == 'hello neckbottle':
         await message.channel.send("hello :3")
+        return
 #    if 'nanti' in message.content:
 #        await message.channel.send("nanti mulu terus kapan pler?")
     if message.content.lower() == 'throw a dice':
         rand = randint(1,6)
         hasil = '>> '+str(rand)
         await message.channel.send(hasil)
+        return
  #   for curse in cursed:
  #       if curse in message.content.lower():
  #           await message.channel.send(message.author.mention+" tolong dong omongan dijaga -.-\"")
@@ -168,15 +173,19 @@ async def on_message(message):
         await message.channel.send('no more')
         sleep(1)
         await message.channel.send('<3')
+        return
     #random fact
     if message.content.lower()=="random fact":
         await message.channel.send(scrap())
-    if"galau" in message.content.lower():
+        return
+    if "galau" in message.content.lower():
         await message.channel.send(quotes())
+        return
   #  if "wow" in message.content.lower():
    #     await message.channel.send(file=discord.File('Harris,lick.gif'))
     if "gimme love quotes" == message.content.lower():
         await message.channel.send(love())
+        return
     if "/download" == message.content.lower()[:9]:
         x =message.content.split(' ')
         x = x[1]
@@ -202,9 +211,11 @@ async def on_message(message):
             res+='\n'+str(i)+". "+title+" ; "+link[-11:]
             i+=1
         await message.channel.send("here is what i\'ve found:"+res) 
-   
+        return
+    if "galau" in 
     if '/help' == message.content.lower():
         gogogo='''```bot feature:
+        
 \'apakah\'
 \'throw a dice\'
 \'what is love?\'
@@ -215,6 +226,7 @@ async def on_message(message):
 sekian, mungkin baru ini :)```'''
 
         await message.channel.send(gogogo)
+        return
 
     
     # if "//play" == message.content.lower()[:6]:
